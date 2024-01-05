@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav>
-      <ul className="navbarList flex items-end justify-center gap-4 border-2 border-green-500 font-playfair-display">
+      <ul className="navbarList flex items-end justify-center gap-4 font-playfair-display">
         <li className="navbarItem">
           <a href="/business" className="hover:underline">
             Business
