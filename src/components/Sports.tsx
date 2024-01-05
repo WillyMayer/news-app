@@ -6,7 +6,7 @@ const Sports = () => {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=us&apiKey=ede83083587041e086318882d4c217e0"
+      "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=ede83083587041e086318882d4c217e0"
     )
       .then((res) => {
         return res.json(); //Transfor json data into javascript object

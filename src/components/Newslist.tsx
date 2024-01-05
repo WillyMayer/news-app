@@ -3,11 +3,26 @@
 const NewsList = (props) => {
   const news = props.news;
   const articles = news.articles;
+  const heroArticle = news.articles[0];
   console.log(articles);
   return (
-    <div className="news-list my-5">
-      <div className="news-msg py-3">
-        <h1 className="text-6xl font-bold text-center font-playfair-display uppercase underline">Last News!</h1>
+    <div className="news-list ">
+      <div className="news-msg">
+      <div className="div-article-item border-2 border-gray-200 p-4 h-auto shadow-2xl">
+                <img
+                  src={heroArticle.urlToImage}
+                  alt={heroArticle.description}
+                  className="border-2 border-gray-300 w-full"
+                />
+                <h2 className="text-3xl font-bold font my-3">
+                  {heroArticle.title}
+                </h2>
+                <h3 className="italic">{heroArticle.source.name}</h3>
+                <p>{heroArticle.description}</p>
+                <a href={heroArticle.url} className="text-blue-400 font-bold ">
+                  More Info
+                </a>
+              </div>
       </div>
       <div className="news-articles flex flex-wrap place-content-center ">
         <ul className="flex flex-wrap justify-center">
