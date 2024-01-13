@@ -1,9 +1,9 @@
 //api key= https://newsapi.org/v2/top-headlines?country=us&apiKey=ede83083587041e086318882d4c217e0
 import {v4 as uuidv4} from 'uuid';
 
-const NewsList = (props) => {
+const NewsList = (props:any) => {
   const news = props.news;
-  const articles = news.articles;
+  const articles = props.news.articles;
   const heroArticle = news.articles[0];
   return (
     <div className="news-list ">
@@ -26,7 +26,7 @@ const NewsList = (props) => {
       </div>
       <div className="news-articles flex flex-wrap place-content-center ">
         <ul className="flex flex-wrap justify-center">
-          {articles.slice(1).map((article) => (
+          {articles.slice(1).map((article:any) => (
             <li key={uuidv4()} className="article-item list-none md:w-4/5 lg:w-6/12">
               <div className="div-article-item border-2 border-gray-200 p-4 h-auto mx-8 my-8 shadow-2xl">
                 <img
